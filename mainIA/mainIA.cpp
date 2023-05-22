@@ -4,3 +4,28 @@ using namespace std;
 
 #include "anak.h"
 #include "ibuh.h"
+
+int main() {
+	ibu* varIbu = new ibu("dini");
+	ibu* varIbu2 = new ibu("dedi");
+	anak* varAnak1 = new anak("tono");
+	anak* varAnak2 = new anak("tini");
+	anak* varAnak3 = new anak("rini");
+
+	varIbu->tambahAnak(varAnak1);
+	varIbu->tambahAnak(varAnak2);
+	varIbu2->tambahAnak(varAnak3);
+	varIbu2->tambahAnak(varAnak1);
+
+	varIbu->cetakAnak();
+	varIbu2->cetakAnak();
+
+	delete varIbu;
+	delete varIbu2;
+	delete varAnak1;
+	delete varAnak2;
+	delete varAnak3;
+
+	
+
+}
